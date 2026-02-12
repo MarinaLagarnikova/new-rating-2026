@@ -473,22 +473,16 @@ function Frame12({ debtLoad, debtLoadPercent, debtLoadColor }: { debtLoad: strin
   );
 }
 
-function Frame21({ rating, ratingColor, barColor, statusText, statusColor, creditPotential, debtLoad, debtLoadPercent, debtLoadColor }: { 
+function Frame21({ rating, ratingColor, barColor, statusText, statusColor }: { 
   rating: string; 
   ratingColor: string; 
   barColor: string; 
   statusText: string; 
   statusColor: string;
-  creditPotential: string;
-  debtLoad: string;
-  debtLoadPercent: string;
-  debtLoadColor: string;
 }) {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[274px]">
       <Frame14 rating={rating} ratingColor={ratingColor} barColor={barColor} statusText={statusText} statusColor={statusColor} />
-      <Frame13 creditPotential={creditPotential} />
-      <Frame12 debtLoad={debtLoad} debtLoadPercent={debtLoadPercent} debtLoadColor={debtLoadColor} />
     </div>
   );
 }
@@ -861,22 +855,18 @@ function Frame10({ scenario }: { scenario: ScenarioType }) {
   );
 }
 
-function Frame16({ rating, ratingColor, barColor, statusText, statusColor, creditPotential, debtLoad, debtLoadPercent, debtLoadColor, scenario }: { 
+function Frame16({ rating, ratingColor, barColor, statusText, statusColor, scenario }: { 
   rating: string; 
   ratingColor: string; 
   barColor: string; 
   statusText: string; 
   statusColor: string;
-  creditPotential: string;
-  debtLoad: string;
-  debtLoadPercent: string;
-  debtLoadColor: string;
   scenario: ScenarioType;
 }) {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[274px]">
-      <Frame21 rating={rating} ratingColor={ratingColor} barColor={barColor} statusText={statusText} statusColor={statusColor} creditPotential={creditPotential} debtLoad={debtLoad} debtLoadPercent={debtLoadPercent} debtLoadColor={debtLoadColor} />
-      <Frame10 scenario={scenario} />
+      <Frame21 rating={rating} ratingColor={ratingColor} barColor={barColor} statusText={statusText} statusColor={statusColor} />
+
     </div>
   );
 }
@@ -1210,7 +1200,13 @@ function Frame15({ rating, ratingColor, barColor, statusText, statusColor, banne
 }) {
   return (
     <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <Frame16 rating={rating} ratingColor={ratingColor} barColor={barColor} statusText={statusText} statusColor={statusColor} creditPotential={creditPotential} debtLoad={debtLoad} debtLoadPercent={debtLoadPercent} debtLoadColor={debtLoadColor} scenario={scenario} />
+      <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[274px]">
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+          <Frame13 creditPotential={creditPotential} />
+          <Frame12 debtLoad={debtLoad} debtLoadPercent={debtLoadPercent} debtLoadColor={debtLoadColor} />
+        </div>
+        <Frame16 rating={rating} ratingColor={ratingColor} barColor={barColor} statusText={statusText} statusColor={statusColor} creditPotential={creditPotential} debtLoad={debtLoad} debtLoadPercent={debtLoadPercent} debtLoadColor={debtLoadColor} scenario={scenario} />
+      </div>
       <Frame17 bannerBg={bannerBg} bannerIcon={bannerIcon} bannerIconColor={bannerIconColor} bannerTitle={bannerTitle} bannerSubtitle={bannerSubtitle} showRecommendations={showRecommendations} showCannotFix={showCannotFix} scenario={scenario} />
     </div>
   );
