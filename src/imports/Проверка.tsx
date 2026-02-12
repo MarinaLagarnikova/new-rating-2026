@@ -1205,7 +1205,7 @@ function Frame15({ rating, ratingColor, barColor, statusText, statusColor, banne
           <Frame13 creditPotential={creditPotential} />
           <Frame12 debtLoad={debtLoad} debtLoadPercent={debtLoadPercent} debtLoadColor={debtLoadColor} />
         </div>
-        <Frame16 rating={rating} ratingColor={ratingColor} barColor={barColor} statusText={statusText} statusColor={statusColor} creditPotential={creditPotential} debtLoad={debtLoad} debtLoadPercent={debtLoadPercent} debtLoadColor={debtLoadColor} scenario={scenario} />
+
       </div>
       <Frame17 bannerBg={bannerBg} bannerIcon={bannerIcon} bannerIconColor={bannerIconColor} bannerTitle={bannerTitle} bannerSubtitle={bannerSubtitle} showRecommendations={showRecommendations} showCannotFix={showCannotFix} scenario={scenario} />
     </div>
