@@ -4,8 +4,8 @@ import svgPathsError from "./svg-co7pc92h1d";
 import svgPathsArrow from "./svg-vffa7mpxe3";
 import { useState } from 'react';
 import CreditsList from '../components/CreditsList';
-import img202510241502261 from "figma:asset/8fbd6c23deb5b73222d21951d6be07772dd2507f.png";
-import img202412061019441 from "figma:asset/095e210699c8ed2d5272bf0a8d4b6c909d896981.png";
+import img202510241502261 from "../assets/8fbd6c23deb5b73222d21951d6be07772dd2507f.png";
+import img202412061019441 from "../assets/095e210699c8ed2d5272bf0a8d4b6c909d896981.png";
 import Image3Vectorized from './Image3Vectorized';
 import type { ScenarioType } from '../App';
 

@@ -5,7 +5,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
@@ -18,9 +18,6 @@ export default defineConfig({
       'next-themes@0.4.6': 'next-themes',
       'lucide-react@0.487.0': 'lucide-react',
       'input-otp@1.4.2': 'input-otp',
-      'figma:asset/c1848150b16b2699d20bf1aa7c7012cc35258859.png': path.resolve(__dirname, './src/assets/c1848150b16b2699d20bf1aa7c7012cc35258859.png'),
-      'figma:asset/8fbd6c23deb5b73222d21951d6be07772dd2507f.png': path.resolve(__dirname, './src/assets/8fbd6c23deb5b73222d21951d6be07772dd2507f.png'),
-      'figma:asset/095e210699c8ed2d5272bf0a8d4b6c909d896981.png': path.resolve(__dirname, './src/assets/095e210699c8ed2d5272bf0a8d4b6c909d896981.png'),
       'embla-carousel-react@8.6.0': 'embla-carousel-react',
       'cmdk@1.1.1': 'cmdk',
       'class-variance-authority@0.7.1': 'class-variance-authority',
@@ -51,6 +48,7 @@ export default defineConfig({
       '@radix-ui/react-alert-dialog@1.1.6': '@radix-ui/react-alert-dialog',
       '@radix-ui/react-accordion@1.2.3': '@radix-ui/react-accordion',
       '@': path.resolve(__dirname, './src'),
+      '@/assets': path.resolve(__dirname, './src/assets'),
     },
   },
   build: {
